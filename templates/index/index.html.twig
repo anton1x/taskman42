@@ -1,0 +1,23 @@
+{% extends '_layout.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block main %}
+    <h1>Здравствуйте</h1>
+    <p class="lead">
+        Даб даб даб да я, масло масло
+    </p>
+
+    {% for workspace in workspaces %}
+        {% if is_granted('CAN_VIEW', workspace) %}
+        <div class="workspace">
+            <h1>{{ workspace.name }}</h1>
+            {% if is_granted('CAN_DELETE', workspace) %}
+                Удалить
+            {% endif %}
+            <div class="card-text">{{ workspace.description }}</div>
+        </div>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
