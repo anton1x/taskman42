@@ -36,3 +36,12 @@ App\Entity\UserWorkspaceRights:
         __calls:
             - addRight: ['CAN_VIEW']
             - addRight: ['CAN_DELETE']
+
+
+    user_workspace_right_3:
+        __construct:
+            user: '@user_1'
+            workspace: '@workspace_3'
+        __calls:
+            - addRight: ['CAN_VIEW']
+            - addRight: ['CAN_DELETE']

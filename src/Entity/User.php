@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 
@@ -16,6 +17,40 @@ class User extends BaseUser
      * @ORM\Column(type="integer")
      */
     protected $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="UserWorkspaceRights", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     */
+    private $workspaceRights;
+
+
+    /**
+     * @return mixed
+     */
+    public function getWorkspaceRights()
+    {
+        return $this->workspaceRights;
+    }
+
+    public function getMappedRights()
+    {
+        $result = [];
+        /**
+         * @var $relation UserWorkspaceRights
+         */
+        foreach ($this->getWorkspaceRights() as $relation){
+            $result[ $relation->getWorkspace()->getId() ] = $relation;
+        }
+
+        return $result;
+    }
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->workspaceRights = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {

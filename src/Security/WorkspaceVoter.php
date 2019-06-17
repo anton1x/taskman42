@@ -46,9 +46,12 @@ class WorkspaceVoter extends Voter
     {
         $user = $token->getUser();
         $workspace = $subject;
-        $relation = $this->rightsRepository->findOrCreateRelation($user, $workspace);
 
-        if($relation->hasRight($attribute)){
+        $rights = $user->getMappedRights();
+
+        if(
+            isset($rights[$workspace->getId()]) &&
+            $rights[$workspace->getId()]->hasRight($attribute)){
             return true;
         }
 

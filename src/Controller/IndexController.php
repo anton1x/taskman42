@@ -2,26 +2,35 @@
 
 namespace App\Controller;
 
-use App\Repository\UserWorkspaceRightsRepository;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\Security\Core\Security;
 
 class IndexController extends AbstractController
 {
 
-    public function index(TokenStorageInterface $token, UserWorkspaceRightsRepository $rightsRepository)
+    public function index(Security $security)
     {
+        /**
+         * @var $user User
+         */
 
-        $user = $token->getToken()->getUser();
+        $user = $security->getUser();
 
-        $relations = $rightsRepository->findBy([
-            'user' => $user,
-        ]);
+        if(!$user){
+            throw new AccessDeniedException();
+        }
+
+        //$user = $token->getToken()->getUser();
+
+        $relations = $user->getMappedRights();
+
 
         $workspaces = [];
 
-        foreach ($relations as $relation) {
+        foreach ($relations as $relation){
             $workspaces[] = $relation->getWorkspace();
         }
 

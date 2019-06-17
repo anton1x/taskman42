@@ -1,55 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50e9923d-48d1-4c6a-9505-611afec396b0" name="Default" comment="Added workspace functionality">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/style.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/dev/hautelook_alice.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/dev/nelmio_alice.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/httplug.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/hwi_oauth.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/knp_menu.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/test/hautelook_alice.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/test/nelmio_alice.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes/hwi_oauth_routing.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes/index.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fixtures/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Project.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/Workspace.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Fixtures/fixtures.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Menu/Builder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190608200134.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190609181150.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190609182614.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190609185606.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/Version20190609195040.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/ProjectRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/WorkspaceRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Security/WorkspaceVoter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/menus/main.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/taskman42.iml" afterPath="$PROJECT_DIR$/.idea/taskman42.iml" />
+    <list default="true" id="50e9923d-48d1-4c6a-9505-611afec396b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bundles.php" afterPath="$PROJECT_DIR$/config/bundles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/User.php" afterPath="$PROJECT_DIR$/src/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php" afterPath="$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fixtures/fixtures.yml" afterPath="$PROJECT_DIR$/src/Fixtures/fixtures.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php" afterPath="$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Security/WorkspaceVoter.php" afterPath="$PROJECT_DIR$/src/Security/WorkspaceVoter.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fixtures.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fixtures.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Fixtures/fixtures.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="731">
+              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -76,8 +35,8 @@
       <file leaf-file-name="WorkspaceVoter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Security/WorkspaceVoter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+            <state relative-caret-position="492">
+              <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
               <folding>
                 <element signature="e#117#152#0#PHP" expanded="true" />
               </folding>
@@ -85,14 +44,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Voter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/Authorization/Voter/Voter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-              <folding>
-                <element signature="e#34#83#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-188">
+              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,18 +77,18 @@
       <file leaf-file-name="EntityRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2652">
-              <caret line="176" column="20" lean-forward="false" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
+            <state relative-caret-position="-163">
+              <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserWorkspaceRights.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserWorkspaceRights.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="-375">
+              <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
@@ -129,17 +96,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Version20190609181150.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190609181150.php">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="271">
+              <caret line="21" column="101" lean-forward="false" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
               <folding>
-                <marker date="1560103910441" expanded="true" signature="648:976" ph="CREATE TABLE... user_workspace_rights" />
-                <marker date="1560103910441" expanded="true" signature="1003:1114" ph="ALTER TABLE user_workspace_rights... " />
-                <marker date="1560103910441" expanded="true" signature="1141:1262" ph="ALTER TABLE user_workspace_rights... " />
-                <marker date="1560103910441" expanded="true" signature="1578:1610" ph="DROP TABLE u... " />
+                <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayCollection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5015">
+              <caret line="315" column="20" lean-forward="false" selection-start-line="315" selection-start-column="20" selection-end-line="315" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,31 +121,11 @@
       <file leaf-file-name="UserWorkspaceRightsRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="493">
+              <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding>
                 <element signature="e#119#154#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorkspaceRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/WorkspaceRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -196,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
         <option value="$PROJECT_DIR$/config/bundles.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/config/routes/fos_user.xml" />
@@ -224,12 +177,13 @@
         <option value="$PROJECT_DIR$/config/packages/fos_user.yaml" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/UserWorkspace.php" />
-        <option value="$PROJECT_DIR$/src/Security/WorkspaceVoter.php" />
-        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/src/Fixtures/fixtures.yml" />
         <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php" />
         <option value="$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php" />
+        <option value="$PROJECT_DIR$/src/Security/WorkspaceVoter.php" />
+        <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Fixtures/fixtures.yml" />
       </list>
     </option>
   </component>
@@ -410,6 +364,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -449,6 +404,12 @@
               <item name="taskman42" type="b2602c69:ProjectViewProjectNode" />
               <item name="taskman42" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Fixtures" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="taskman42" type="b2602c69:ProjectViewProjectNode" />
+              <item name="taskman42" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -461,7 +422,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -470,7 +430,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="SearchEverywhereHistoryKey" value="fix&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/src/Fixtures/fixtures.yml&#10;ind&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/templates/index/index.html.twig&#10;secu&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/config/packages/security.yaml&#10;serv&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/config/services.yaml" />
+    <property name="SearchEverywhereHistoryKey" value="Voter&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/src/Security/WorkspaceVoter.php&#10;Repo&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/src/Repository/UserWorkspaceRightsRepository.php&#10;fix&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/src/Fixtures/fixtures.yml&#10;ind&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/templates/index/index.html.twig&#10;secu&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/config/packages/security.yaml&#10;serv&#9;FILE&#9;file://C:/symf/teach/taskman/taskman42/config/services.yaml" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
   </component>
@@ -508,28 +468,37 @@
       <workItem from="1559818159935" duration="4421000" />
       <workItem from="1559985732320" duration="11566000" />
       <workItem from="1560079413947" duration="13528000" />
-      <workItem from="1560152067971" duration="285000" />
+      <workItem from="1560152067971" duration="7977000" />
+      <workItem from="1560768219915" duration="2478000" />
     </task>
+    <task id="LOCAL-00001" summary="Added workspace functionality">
+      <created>1560152365190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560152365190</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43887000" />
+    <option name="totallyTimeSpent" value="54057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="3" width="1918" height="1044" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2578041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26049516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33039647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33039647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -555,20 +524,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes/index.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/build/entrypoints.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1428">
@@ -735,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,9 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding>
-            <element signature="e#28#58#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -775,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,21 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <marker date="1560080151495" expanded="true" signature="70:1194" ph="{&quot;php&quot;: &quot;^7.1.3&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="1215:1509" ph="{&quot;doctrine/doctrine-fixtures-bundle&quot;: &quot;^3.2&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="1525:1628" ph="{&quot;sort-packages&quot;: true...}" />
-            <marker date="1560080151495" expanded="true" signature="1556:1591" ph="{&quot;*&quot;: &quot;dist&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="1646:1710" ph="{...}" />
-            <marker date="1560080151495" expanded="true" signature="1665:1704" ph="{&quot;App\&quot;: &quot;src/&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="1732:1805" ph="{...}" />
-            <marker date="1560080151495" expanded="true" signature="1751:1799" ph="{&quot;App\Tests\&quot;: &quot;tests/&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="1822:2065" ph="{&quot;paragonie/random_compat&quot;: &quot;2.*&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="2082:2361" ph="{...}" />
-            <marker date="1560080151495" expanded="true" signature="2108:2218" ph="{&quot;cache:clear&quot;: &quot;symfony-cmd&quot;...}" />
-            <marker date="1560080151495" expanded="true" signature="2248:2287" ph="[...]" />
-            <marker date="1560080151495" expanded="true" signature="2379:2417" ph="{&quot;symfony/symfony&quot;: &quot;*&quot;...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,22 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="78" lean-forward="false" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1183">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -851,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,14 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="176" column="20" lean-forward="false" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -891,22 +798,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5015">
+          <caret line="315" column="20" lean-forward="false" selection-start-line="315" selection-start-column="20" selection-end-line="315" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="38" column="24" lean-forward="false" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
           <folding>
-            <marker date="1560103910441" expanded="true" signature="648:976" ph="CREATE TABLE... user_workspace_rights" />
-            <marker date="1560103910441" expanded="true" signature="1003:1114" ph="ALTER TABLE user_workspace_rights... " />
-            <marker date="1560103910441" expanded="true" signature="1141:1262" ph="ALTER TABLE user_workspace_rights... " />
-            <marker date="1560103910441" expanded="true" signature="1578:1610" ph="DROP TABLE u... " />
+            <element signature="e#119#154#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/Authorization/Voter/Voter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding>
-            <element signature="e#34#83#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,41 +842,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Security/WorkspaceVoter.php">
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" column="59" lean-forward="false" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
-          <folding>
-            <element signature="e#117#152#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/UserWorkspaceRightsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#119#154#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fixtures/fixtures.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="-163">
+          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/UserWorkspaceRights.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="-375">
+          <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Security/WorkspaceVoter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="53" column="30" lean-forward="false" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="e#117#152#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="21" column="101" lean-forward="false" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fixtures/fixtures.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
