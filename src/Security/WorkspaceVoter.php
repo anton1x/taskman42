@@ -23,6 +23,8 @@ class WorkspaceVoter extends Voter
      */
     private $rightsRepository;
 
+    public $aa = 'aa';
+
     public function __construct(UserWorkspaceRightsRepository $rightsRepository)
     {
         $this->rightsRepository = $rightsRepository;

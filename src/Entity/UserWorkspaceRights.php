@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Security\WorkspaceVoter;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -43,9 +44,9 @@ class UserWorkspaceRights
     private $rights;
 
     public const permissions = [
-      'CAN_DELETE',
-      'CAN_VIEW',
-      'CAN_START_PROJECT',
+      'delete' => 'CAN_DELETE',
+      'view' => 'CAN_VIEW',
+      'start_project' => 'CAN_START_PROJECT',
     ];
 
     public function __construct(User $user, Workspace $workspace)
@@ -53,6 +54,8 @@ class UserWorkspaceRights
         $this->rights = new ArrayCollection();
         $this->user = $user;
         $this->workspace = $workspace;
+
+
     }
 
     /**

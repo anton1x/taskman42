@@ -8,16 +8,31 @@
         Даб даб даб да я, масло масло
     </p>
 
-    {% for workspace in workspaces %}
-        {% if is_granted('CAN_VIEW', workspace) %}
-        <div class="workspace">
-            <h1>{{ workspace.name }}</h1>
-            {% if is_granted('CAN_DELETE', workspace) %}
-                Удалить
+    <div class="card-deck mb-3 text-center">
+        {% for workspace in workspaces %}
+            {% if is_granted('CAN_VIEW', workspace) %}
+                <div class="col-sm-6">
+                <div class="card mb-lg-3 shadow-sm workspace">
+
+                    <div class="card-body">
+                        <h3 class="card-title">{{ workspace.name }}</h3>
+                        <div class="px-3 workspace-card-desc">
+                            <p class="card-text">{{ workspace.description }}</p>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer px-5">
+                        <a class="card-link" href="">{{ 'Смотреть'|trans }}</a>
+                        {% if is_granted('CAN_DELETE', workspace) %}
+                            <a class="card-link" href="">{{ 'Удалить'|trans }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                </div>
             {% endif %}
-            <div class="card-text">{{ workspace.description }}</div>
-        </div>
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 
 {% endblock %}

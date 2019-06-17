@@ -20,6 +20,11 @@ class User extends BaseUser
 
     /**
      * @ORM\OneToMany(targetEntity="UserWorkspaceRights", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     * @ORM\JoinColumns({
+     *          @ORM\JoinColumn(name="id"),
+     *          @ORM\JoinColumn(name="name"),
+     *          @ORM\JoinColumn(name="description")
+     *     })
      */
     private $workspaceRights;
 
