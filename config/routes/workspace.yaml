@@ -5,3 +5,8 @@ workspace_view:
 workspace_remove:
     path: /remove/{id}
     controller: App\Controller\WorkspaceController::remove
+
+workspace_project_:
+    prefix: /{workspace_id}/project
+    resource: project.yaml
+

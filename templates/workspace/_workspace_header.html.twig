@@ -1,6 +1,20 @@
 {% block workspace_header %}
-    <div class="workspace-header border-bottom pb-3 px-2">
-        <span class="badge badge-dark">рабочая область</span>
-        <h1 class="display-3">{{ workspace.name }}</h1>
+    <div class="workspace-header border-bottom pb-3 px-2 position-relative">
+        <div class="float-md-left">
+            <span class="badge badge-dark">рабочая область</span>
+            <h1 class="display-3">{{ workspace.name }}</h1>
+        </div>
+
+        <div class="float-md-right mt-sm-5 mb-sm-3">
+            {% if is_granted(rights.start_project, workspace) %}
+            <a href="{{ path('project_create', {"workspace_id": workspace.id}) }}">
+                <button class="btn btn-success">Создать проект</button>
+            </a>
+            {% endif %}
+
+        </div>
+
+        <div class="clearfix"></div>
+
     </div>
 {% endblock %}

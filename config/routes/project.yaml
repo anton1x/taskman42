@@ -1,0 +1,13 @@
+project_view:
+    path: /{id}
+    controller: App\Controller\ProjectController::view
+    requirements:
+        id: '\d+'
+
+project_remove:
+    path: /remove/{id}
+    controller: App\Controller\ProjectController::remove
+
+project_create:
+    path: /new
+    controller: App\Controller\ProjectController::create

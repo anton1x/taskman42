@@ -1,0 +1,11 @@
+{% macro form_group(row) %}
+    <div class="form-group">
+        {{ form_label(row) }}
+        {{ form_widget(row, {
+            attr: {
+                class:'form-control'
+            }
+        })
+        }}
+    </div>
+{% endmacro %}

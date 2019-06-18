@@ -1,0 +1,18 @@
+{% extends '_layout.html.twig' %}
+{% from 'forms/bootstrap_forms.html.twig' import form_group %}
+
+{% block main %}
+    {% include 'workspace/_workspace_header.html.twig' with {workspace: workspace} %}
+
+    {% block create_project_form %}
+        <div class="project-form-create pt-5 col-12 position-relative">
+            {{ form_start(form) }}
+                {{ form_group(form.name) }}
+                {{ form_group(form.description) }}
+
+            <input type="submit" class="btn btn-success" value="{{ 'Создать'|trans }}">
+            {{ form_end(form) }}
+        </div>
+
+    {% endblock %}
+{% endblock %}

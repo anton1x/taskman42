@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% set rights = constant('App\\Entity\\UserWorkspaceRights::permissions') %}
+
 {% block body %}
                 {% block header %}
                     {% block nav %}
