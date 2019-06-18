@@ -29,6 +29,11 @@ class Workspace
     private $description;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserWorkspaceRights", cascade={"remove"}, mappedBy="workspace")
+     */
+    private $userRelations;
+
+    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="workspace", orphanRemoval=true)
      */
     private $projects;

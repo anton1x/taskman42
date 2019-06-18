@@ -1,0 +1,7 @@
+workspace_view:
+    path: /{id}
+    controller: App\Controller\WorkspaceController::view
+
+workspace_remove:
+    path: /remove/{id}
+    controller: App\Controller\WorkspaceController::remove

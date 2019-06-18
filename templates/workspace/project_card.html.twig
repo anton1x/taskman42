@@ -1,0 +1,16 @@
+{% block project_card %}
+    <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+        <div class="card shadow-sm workspace">
+            <div class="card-header">
+                <h5 class="">{{ project.name }}</h5>
+            </div>
+            <div class="card-body">
+                {{ project.description }}
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-sm btn-light">Смотреть</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

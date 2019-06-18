@@ -33,7 +33,7 @@ class UserWorkspaceRights
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Workspace")
+     * @ORM\ManyToOne(targetEntity="Workspace", cascade={"remove"}, inversedBy="userRelations")
      */
     private $workspace;
 

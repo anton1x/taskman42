@@ -20,6 +20,11 @@
 
 
             <main role="main" class="container flex-shrink-0">
+
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+
                 {% block main %}
                     Хуяндое
                 {% endblock %}

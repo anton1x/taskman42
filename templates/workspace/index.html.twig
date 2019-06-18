@@ -1,0 +1,11 @@
+{% extends '_layout.html.twig' %}
+
+{% block main %}
+    {% include 'workspace/_workspace_header.html.twig' with {workspace: workspace} %}
+
+    <div class="card-deck my-3 text-center">
+    {% for project in workspace.projects %}
+        {% include 'workspace/project_card.html.twig' with {project: project} only %}
+    {% endfor %}
+    </div>
+{% endblock %}

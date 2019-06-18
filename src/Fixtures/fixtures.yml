@@ -1,7 +1,13 @@
 App\Entity\Workspace:
     workspace_{1..10}:
         name: <text(20..123)>
-        description: <text(1023)>
+        description: <text(255)>
+
+App\Entity\Project:
+    project_{1..199}:
+        name: <text(20..255)>
+        description: <text(64..511)>
+        workspace: '@workspace*'
 
 
 App\Entity\User:
@@ -35,6 +41,7 @@ App\Entity\UserWorkspaceRights:
             workspace: '@workspace_4'
         __calls:
             - addRight: ['CAN_VIEW']
+            - addRight: ['CAN_START_PROJECT']
             - addRight: ['CAN_DELETE']
 
 
