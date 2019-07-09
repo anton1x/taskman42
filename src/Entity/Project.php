@@ -32,6 +32,12 @@ class Project
      */
     private $workspace;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\UserProjectRight", cascade={"remove"}, mappedBy="project")
+     */
+    private $userRelations;
+
     public function getId(): ?int
     {
         return $this->id;

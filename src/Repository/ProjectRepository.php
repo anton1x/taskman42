@@ -3,8 +3,14 @@
 namespace App\Repository;
 
 use App\Entity\Project;
+use App\Entity\Workspace;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Predis\ClientInterface;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use SymfonyBundles\RedisBundle\Redis\Client;
+use SymfonyBundles\RedisBundle\SymfonyBundlesRedisBundle;
 
 /**
  * @method Project|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,10 +20,42 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class ProjectRepository extends ServiceEntityRepository
 {
-    public function __construct(RegistryInterface $registry)
+
+    private $redis;
+
+    /**
+     * @var ContainerInterface|null
+     */
+    private $container;
+
+    public function __construct(RegistryInterface $registry, ClientInterface $redis)
     {
         parent::__construct($registry, Project::class);
+        $this->redis = $redis;
     }
+
+    function getRedisKeyForProjectsList(Workspace $workspace)
+    {
+        return "workspace:{$workspace->getId()}:projects_list";
+    }
+
+
+    public function getProjectsByWorkspaceQuery(Workspace $workspace)
+    {
+
+        $q = $this->createQueryBuilder('m')
+            ->where('m.workspace = :workspace')
+            ->setParameter('workspace', $workspace);
+
+        if($list = $this->redis->smembers($this->getRedisKeyForProjectsList($workspace))){
+            $q->where('m.id IN (:ids) ')
+                ->setParameters(['ids'=>$list]);
+        }
+
+
+        return $q->getQuery();
+    }
+
 
     // /**
     //  * @return Project[] Returns an array of Project objects
@@ -47,4 +85,5 @@ class ProjectRepository extends ServiceEntityRepository
         ;
     }
     */
+
 }

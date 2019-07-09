@@ -19,7 +19,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="UserWorkspaceRights", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     * @ORM\OneToMany(targetEntity="UserWorkspaceRights", mappedBy="user", fetch="LAZY", indexBy="user.id")
      * @ORM\JoinColumns({
      *          @ORM\JoinColumn(name="id"),
      *          @ORM\JoinColumn(name="name"),
@@ -27,6 +27,23 @@ class User extends BaseUser
      *     })
      */
     private $workspaceRights;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="UserProjectRight", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     */
+
+    private $projectRights;
+
+
+    /**
+     * @return UserProjectRight
+     */
+    public function getProjectRights()
+    {
+        return $this->projectRights;
+    }
+
 
 
     /**
@@ -55,10 +72,12 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->workspaceRights = new ArrayCollection();
+        $this->projectRights = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
         return $this->id;
     }
+
 }

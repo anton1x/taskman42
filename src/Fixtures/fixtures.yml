@@ -19,7 +19,7 @@ App\Entity\User:
         roles:
             - ROLE_ADMIN
     user_{2..50}:
-        username: user<current()>
+        username: <username()>
         email: <email()>
         plainPassword: <password()>
         enabled: true
@@ -28,14 +28,14 @@ App\Entity\User:
 
 
 App\Entity\UserWorkspaceRights:
-    user_workspace_right_1:
+    user_1_workspace_right_1:
         __construct:
             user: '@user_1'
             workspace: '@workspace_2'
         __calls:
             - addRight: ['CAN_VIEW']
 
-    user_workspace_right_2:
+    user_1_workspace_right_2:
         __construct:
             user: '@user_1'
             workspace: '@workspace_4'
@@ -45,10 +45,17 @@ App\Entity\UserWorkspaceRights:
             - addRight: ['CAN_DELETE']
 
 
-    user_workspace_right_3:
+    user_1_workspace_right_3:
         __construct:
             user: '@user_1'
             workspace: '@workspace_3'
         __calls:
             - addRight: ['CAN_VIEW']
             - addRight: ['CAN_DELETE']
+
+    user_other_workspace_right_{1..100}:
+        __construct:
+            user: '@user_<numberBetween(2, 50)>'
+            workspace: '@workspace_<numberBetween(1, 10)>'
+        __calls:
+            - addRight: ['CAN_VIEW']

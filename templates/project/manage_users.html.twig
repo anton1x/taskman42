@@ -1,0 +1,22 @@
+{% extends '_layout.html.twig' %}
+{% import 'forms/bootstrap_forms.html.twig' as forms %}
+
+{% block main %}
+    <div id="user-rights-manager" class="col-12" data-endpoint="{{ path('project_manage_users_json', {'workspace_id': workspace.id, 'id': project.id}) }}"></div>
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-lg-6">
+            {{ forms.checkbox_group(form.rights) }}
+        </div>
+        <div class="col-lg-6">
+            {{ forms.form_group(form.users) }}
+        </div>
+    </div>
+    <div class="mt-5">
+        <input type="submit" class="btn btn-success" value="{{ 'Сохранить с переназначением'|trans }}">
+        <input type="submit" class="btn btn-dark" value="{{ 'Сохранить с добавлением'|trans }}">
+    </div>
+
+    {{ form_end(form) }}
+{% endblock %}

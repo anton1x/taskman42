@@ -4,8 +4,10 @@
     {% include 'workspace/_workspace_header.html.twig' with {workspace: workspace} %}
 
     <div class="card-deck my-3 text-center">
-    {% for project in workspace.projects %}
+    {% for project in projects %}
         {% include 'workspace/project_card.html.twig' with {project: project} only %}
     {% endfor %}
     </div>
+
+    {{ knp_pagination_render(pagination) }}
 {% endblock %}

@@ -7,6 +7,10 @@ parameters:
     locale: 'ru'
     knp_menu.renderer.twig.options:
         currentClass: active
+    rabbitmq_host: 'rabbit-mq'
+    rabbitmq_user: 'my_username'
+    rabbitmq_password: '12345'
+    rabbitmq_statuslayer_vhost: 'taskman42'
 
 services:
     # default configuration for services in *this* file
@@ -41,3 +45,17 @@ services:
         arguments: ['@knp_menu.factory']
         tags:
             - { name: 'knp_menu.menu_builder', method: 'mainMenu', alias: 'main'}
+
+    app.project_rights_hierarchy:
+        class: App\Hierarchy\ProjectRightsHierarchy
+
+    App\EventSubscriber\InviteUsersSubscriber:
+        arguments: ['@old_sound_rabbit_mq.emailing_producer']
+        autowire: false
+        tags:
+            - { name: 'kernel.event_subscriber', priority: -100 }
+
+
+    App\Repository\ProjectRepository:
+        arguments: ['@doctrine', '@sb_redis.default']
+        public: true

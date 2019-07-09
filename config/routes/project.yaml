@@ -11,3 +11,11 @@ project_remove:
 project_create:
     path: /new
     controller: App\Controller\ProjectController::create
+
+project_manage_users:
+    path: /{id}/manage-users
+    controller: App\Controller\ProjectController::manageUsers
+
+project_manage_users_json:
+    path: /{id}/manage-users-json
+    controller: App\Controller\ProjectController::manageUsersJSON

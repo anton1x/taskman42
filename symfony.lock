@@ -111,9 +111,6 @@
     "egulias/email-validator": {
         "version": "2.1.8"
     },
-    "facebook/webdriver": {
-        "version": "1.6.0"
-    },
     "fig/link-util": {
         "version": "1.0.0"
     },
@@ -162,11 +159,17 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "knplabs/knp-components": {
+        "version": "v1.3.10"
+    },
     "knplabs/knp-menu": {
         "version": "2.3.0"
     },
     "knplabs/knp-menu-bundle": {
         "version": "v2.2.1"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v4.0.0"
     },
     "monolog/monolog": {
         "version": "1.24.0"
@@ -192,6 +195,22 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.1.1"
+    },
+    "php-amqplib/php-amqplib": {
+        "version": "v2.8.0"
+    },
+    "php-amqplib/rabbitmq-bundle": {
+        "version": "1.12",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.12",
+            "ref": "ce3ca2e4577270c4f518539aa6b9e878998fcfef"
+        },
+        "files": [
+            "./config/packages/old_sound_rabbit_mq.yaml",
+            "./src/Consumer/.gitignore"
+        ]
     },
     "php-http/client-common": {
         "version": "1.9.1"
@@ -241,6 +260,9 @@
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
     },
+    "predis/predis": {
+        "version": "v1.1.1"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -288,6 +310,18 @@
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.2.1"
+    },
+    "symfony-bundles/redis-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "2becca99cc83c0e6d2ad68875fa84c516298dec4"
+        },
+        "files": [
+            "./config/packages/sb_redis.yaml"
+        ]
     },
     "symfony/asset": {
         "version": "v4.2.9"
@@ -396,9 +430,6 @@
             "./src/Kernel.php"
         ]
     },
-    "symfony/http-client": {
-        "version": "v4.3.1"
-    },
     "symfony/http-foundation": {
         "version": "v4.2.9"
     },
@@ -443,9 +474,6 @@
     "symfony/orm-pack": {
         "version": "v1.0.6"
     },
-    "symfony/panther": {
-        "version": "v0.3.0"
-    },
     "symfony/phpunit-bridge": {
         "version": "4.3",
         "recipe": {
@@ -472,9 +500,6 @@
         "version": "v1.11.0"
     },
     "symfony/polyfill-php72": {
-        "version": "v1.11.0"
-    },
-    "symfony/polyfill-php73": {
         "version": "v1.11.0"
     },
     "symfony/process": {

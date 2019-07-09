@@ -2,14 +2,17 @@
     <div class="col-lg-4 col-md-6 col-sm-12 my-3">
         <div class="card shadow-sm workspace">
             <div class="card-header">
-                <h5 class="">{{ project.name }}</h5>
+                <h5 class="float-left">{{ project.name }}</h5>
+                <a class="fa fa-cog d-inline-block align-text-middle float-right" aria-hidden="false" href="{{ path('project_manage_users', {id: project.id, workspace_id: project.workspace.id}) }}"></a>
             </div>
             <div class="card-body">
                 {{ project.description }}
             </div>
 
             <div class="card-footer">
-                <button class="btn btn-sm btn-light">Смотреть</button>
+                <a href="{{ path('project_view', {id: project.id, workspace_id: project.workspace.id}) }}">
+                    <button class="btn btn-sm btn-light">Смотреть</button>
+                </a>
             </div>
         </div>
     </div>

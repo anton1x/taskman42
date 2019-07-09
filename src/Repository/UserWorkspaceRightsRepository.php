@@ -14,6 +14,7 @@ use App\Entity\Workspace;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use App\Entity\User;
+use Doctrine\ORM\Query\Expr\Join;
 
 class UserWorkspaceRightsRepository extends ServiceEntityRepository
 {
@@ -37,8 +38,21 @@ class UserWorkspaceRightsRepository extends ServiceEntityRepository
     {
         $q = $this->createQueryBuilder('m')
             ->select(['m', 'workspace'])
-            ->leftJoin('m.workspace', 'workspace', 'WITH', 'm.user = :user')
+            ->innerJoin('m.workspace', 'workspace', 'WITH', 'm.user = :user')
             ->setParameter('user', $user)
+            ->getQuery();
+
+        $result = $q->execute();
+
+        return $result;
+    }
+
+    public function getWorkspaceRelatedUsers(Workspace $workspace)
+    {
+        $q = $this->createQueryBuilder('m')
+            ->select(['m','user'])
+            ->innerJoin('m.user', 'user', Join::WITH, 'm.workspace = :workspace')
+            ->setParameter('workspace', $workspace)
             ->getQuery();
 
         $result = $q->execute();

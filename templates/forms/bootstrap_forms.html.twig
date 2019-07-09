@@ -9,3 +9,25 @@
         }}
     </div>
 {% endmacro %}
+
+{% macro checkbox_group(row) %}
+    <div class="form-group">
+        {{ form_label(row) }}
+    {% for item in row %}
+    <div class="form-check">
+            {{ form_widget(item, {
+                attr: {
+                    class: 'form-check-input'
+                },
+
+            }) }}
+
+            {{ form_label(item, item.vars.label, {
+                label_attr: {
+                    class: 'form-check-label'
+                }
+            }) }}
+    </div>
+    {% endfor %}
+    </div>
+{% endmacro %}

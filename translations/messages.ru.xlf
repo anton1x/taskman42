@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="ru" target-language="ru" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="eshBB8E" resname="Смотреть">
+        <source>Смотреть</source>
+        <target>__Смотреть</target>
+      </trans-unit>
+      <trans-unit id="vpmxNhI" resname="Удалить">
+        <source>Удалить</source>
+        <target>__Удалить</target>
+      </trans-unit>
+      <trans-unit id="4r40l0r" resname="Создать">
+        <source>Создать</source>
+        <target>__Создать</target>
+      </trans-unit>
+      <trans-unit id="bi3ktNl" resname="Сохранить с переназначением">
+        <source>Сохранить с переназначением</source>
+        <target>__Сохранить с переназначением</target>
+      </trans-unit>
+      <trans-unit id="IWhs7JG" resname="Сохранить с добавлением">
+        <source>Сохранить с добавлением</source>
+        <target>__Сохранить с добавлением</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

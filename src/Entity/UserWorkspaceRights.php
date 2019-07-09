@@ -28,7 +28,7 @@ class UserWorkspaceRights
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="workspaceRights")
+     * @ORM\ManyToOne(targetEntity="User",  inversedBy="workspaceRights")
      */
     private $user;
 
