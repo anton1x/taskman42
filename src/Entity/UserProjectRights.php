@@ -5,12 +5,11 @@ namespace App\Entity;
 use App\Security\WorkspaceVoter;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use RightsHierarchy\Right;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserProjectRightRepository")
  */
-class UserProjectRight
+class UserProjectRights
 {
     /**
      * @ORM\Id()
@@ -28,27 +27,30 @@ class UserProjectRight
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="projectRights")
+     * @ORM\ManyToOne(targetEntity="User",  inversedBy="workspaceRights")
      */
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Project", inversedBy="userRelations")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Project", cascade={"remove"}, inversedBy="userRelations")
      */
     private $project;
 
     /**
-     * @var $right string
-     * @ORM\Column(type="string", name="right", length=255)
+     * @var $rights ArrayCollection
+     * @ORM\Column(type="array", name="rights")
      */
-    private $right;
+    private $rights;
 
 
-    public function __construct(User $user, Project $project, $right)
+
+    public function __construct(User $user, Project $project)
     {
+        $this->rights = new ArrayCollection();
         $this->user = $user;
         $this->project = $project;
-        $this->right = $right;
+
+
     }
 
     /**
@@ -83,24 +85,38 @@ class UserProjectRight
         $this->project = $project;
     }
 
-    /**
-     * @return string
-     */
-    public function getRight(): string
+    public function hasRight($right)
     {
-        return $this->right;
+        return $this->rights->contains($right);
     }
 
-    /**
-     * @param string $right
-     */
-    public function setRight($right)
+    public function addRight($right)
     {
-        $this->right = $right;
+        if(!$this->hasRight($right)){
+            $this->rights->add($right);
+        }
     }
 
+    public function removeRight($right)
+    {
+        if($this->hasRight($right)){
+            $this->rights->removeElement($right);
+        }
+    }
 
+    /*
+    public function setRights(array $rights)
+    {
+        $this->rights = $rights;
+    }*/
 
+    /**
+     * @return ArrayCollection
+     */
+    public function getRights(): ArrayCollection
+    {
+        return $this->rights;
+    }
 
 
 }

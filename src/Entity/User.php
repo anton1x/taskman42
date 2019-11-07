@@ -30,14 +30,19 @@ class User extends BaseUser
 
 
     /**
-     * @ORM\OneToMany(targetEntity="UserProjectRight", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     * @ORM\OneToMany(targetEntity="App\Entity\UserProjectRights", mappedBy="user",fetch="LAZY", indexBy="user.id")
+     *      * @ORM\JoinColumns({
+     *          @ORM\JoinColumn(name="id"),
+     *          @ORM\JoinColumn(name="project"),
+     *          @ORM\JoinColumn(name="rights")
+     *     })
      */
 
     private $projectRights;
 
 
     /**
-     * @return UserProjectRight
+     * @return UserProjectRights
      */
     public function getProjectRights()
     {

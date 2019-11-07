@@ -3,10 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Project;
+use App\Entity\User;
+use App\Entity\UserWorkspaceRights;
 use App\Entity\Workspace;
 use App\Form\ProjectManageUsersType;
 use App\Form\ProjectType;
 use App\Hierarchy\ProjectRightsHierarchy;
+use App\Repository\UserProjectRightRepository;
 use App\Repository\UserWorkspaceRightsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use RightsHierarchy\Hierarchy;
@@ -107,22 +110,27 @@ class ProjectController extends AbstractController
         Project $project,
         ProjectRightsHierarchy $hierarchy,
         UserWorkspaceRightsRepository $workspaceRightsRepository,
+        UserProjectRightRepository $projectRightRepository,
         Request $request,
         SerializerInterface $serializer)
     {
 
         $workspace_rights = $workspaceRightsRepository->getWorkspaceRelatedUsers($workspace);
         $users_formatted = [];
-
+        $assignedRights = $projectRightRepository->getRightsForProject($project);
         foreach ($workspace_rights as $right){
             $user = $right->getUser();
-            $users_formatted[ $user->getId() ] = [
-                'id' => $user->getId(),
+            $userId = $user->getId();
+            $users_formatted[ $userId ] = [
+                'id' => $userId,
                 'name' => $user->getUsername(),
-                'rights' => $user->getProjectRights(),
+                'rights' => [] ,
             ];
-        }
 
+            if(isset($assignedRights[$userId])){
+                $users_formatted[ $userId ] ['rights'] = $assignedRights[$userId];
+            }
+        }
 
         $response = [
           'hierarchy' => $hierarchy->getHierarchy()->toArray(),

@@ -11,18 +11,20 @@ namespace App\Repository;
 
 use App\Entity\Project;
 use App\Entity\UserProjectRight;
+use App\Entity\UserProjectRights;
 use App\Entity\UserWorkspaceRights;
 use App\Entity\Workspace;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use App\Entity\User;
+use Doctrine\ORM\Query\Expr;
 use Doctrine\ORM\Query\Expr\Join;
 
 class UserProjectRightRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, UserProjectRight::class);
+        parent::__construct($registry, UserProjectRights::class);
     }
 
     public function findOrCreateRelation(User $user, Project $project)
@@ -34,6 +36,28 @@ class UserProjectRightRepository extends ServiceEntityRepository
         
 
         return $relation ?: new UserWorkspaceRights($user, $project);
+    }
+
+    private function getRightsForProjectQuery(Project $project)
+    {
+        $items = $this->createQueryBuilder('m')
+            ->where('m.project = :project')
+            ->orderBy('m.user', 'asc')
+            ->getQuery()
+            ->setParameter('project', $project);
+        return $items;
+    }
+
+    public function getRightsForProject($project)
+    {
+        $q = $this->getRightsForProjectQuery($project);
+        $items = $q->getResult();
+        $result = [];
+        foreach ($items as $item){
+            $result[ $item->getUser()->getId() ] = $item->getRights();
+        }
+
+        return $result;
     }
 
     /**

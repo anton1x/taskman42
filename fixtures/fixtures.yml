@@ -7,7 +7,7 @@ App\Entity\Project:
     project_{1..199}:
         name: <text(20..255)>
         description: <text(64..511)>
-        workspace: '@workspace<numberBetween(2, 50)>'
+        workspace: '@workspace_<numberBetween(2, 10)>'
 
 
 App\Entity\User:
@@ -27,10 +27,10 @@ App\Entity\User:
             - ROLE_USER
 
 App\Entity\UserProjectRights:
-    user_1_project_right_1:
+    user_1_project_rights_{1..100}:
         __construct:
             user: '@user_1'
-            project: '@project_6'
+            project: '@project_*'
         __calls:
             - addRight: ['PROJECT_CAN_ALL']
 

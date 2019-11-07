@@ -34,7 +34,7 @@ class Project
 
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\UserProjectRight", cascade={"remove"}, mappedBy="project")
+     * @ORM\OneToMany(targetEntity="App\Entity\UserProjectRights", cascade={"remove"}, mappedBy="project")
      */
     private $userRelations;
 
